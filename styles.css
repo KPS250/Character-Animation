@@ -1,0 +1,123 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: #25252B;
+}
+* {
+  touch-action: manipulation;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+.button {
+    background-color: #2ecc71; /* Green */
+    border-width: 2px;
+    border-color: white;
+    color: #25252B;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#c {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.loading {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader{
+  -webkit-perspective: 120px;
+  -moz-perspective: 120px;
+  -ms-perspective: 120px;
+  perspective: 120px;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:before{
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  background-color: #9bffaf;
+  animation: flip 1s infinite;
+}
+
+.float {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 3;
+    top: 10px;
+    position: absolute;
+}
+
+.floatBottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 3;
+    bottom: 10px;
+    position: absolute;
+}
+
+
+@keyframes flip {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(180deg)  rotateX(180deg);
+  }
+}
