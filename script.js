@@ -105,7 +105,7 @@
           idleAnim.tracks.splice(9, 3);
           
           idle = mixer.clipAction(idleAnim);
-          idle.play();
+          //idle.play();
           
         },
         undefined, // We don't need this function
@@ -243,7 +243,13 @@
     
     document.addEventListener('mousemove', function(e) {
       var mousecoords = getMousePos(e);
-        /*
+      //console.log('mousecoords', mousecoords);
+      /*
+     
+      // Left   : X:0    Y:300
+      // Right  : X:800  Y:300
+      // Bottom : X:450  Y:500
+
         if (neck && waist) {
   
           moveJoint(mousecoords, neck, 50);
